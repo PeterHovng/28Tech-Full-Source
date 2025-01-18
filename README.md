@@ -70,11 +70,11 @@ Nếu bạn muốn đóng góp, vui lòng làm theo các bước sau:
 
 ## Liên hệ
 
-- Email: support@28tech.com
-- Website: [28Tech](https://28tech.com)
-- Cộng đồng: [Facebook Group](https://facebook.com/groups/28tech)
-
+- Email: 28tech.work@gmail.com
+- Website: [28Tech](https://28tech.com.vn)
+- Cộng đồng: [Facebook Group](https://www.facebook.com/groups/28techgroup)
+- Youtube: [28Tech](https://www.youtube.com/@28tech)
 ---
 
-Cảm ơn bạn đã quan tâm đến **28Tech-Full-Source**! Chúng tôi hy vọng rằng dự án này sẽ là một nguồn cảm hứng và hỗ trợ tuyệt vời trong hành trình học lập trình của bạn.
+Cảm ơn bạn đã quan tâm đến **28Tech-Full-Source**! Hy vọng rằng dự án này sẽ là một nguồn cảm hứng và hỗ trợ tuyệt vời trong hành trình học lập trình của bạn.
 
