@@ -1,0 +1,148 @@
+- HTML: Hyper Text Markup Language
+- Ngôn ngữ đánh dấu siêu văn bản
+- tác dụng tạo bố cục và định dang trang web
+- không phải ngôn ngữ lập trình
+
+#######################
+Cấu trúc của 1 trang HTML
+
+- các nội dung trong web thuộc phần trong thẻ <body> </body>
+
+- tên trang - tiêu đề thuộc phần trong thể <title>
+
+- <!DOCTYPE html>: DOCTYPE kiểu tài liệu dùng để khai báo , html là viết bằng HTML
+
+- <html></html> :
+    + cặp thẻ bắt buộc
+    + element cao cấp nhất 
+    + nhiệm vụ ĐÓNG GÓI TẤT CẢ NỘI DỤNG TRANG HTML
+- <head></head> :
+    + khai báo thông tin meta trang web: 
+        _ tiêu đề
+        _ charset
+
+- <title></titlte> cặp thẻ nằm trong <head>: 
+    + khai báo tiêu đề trang
+
+- <body></body>:
+    + cặp thể đóng gọi nội dung hiển thị trên trang
+
+- <h1></h1>:
+    + phần tử xác định 1 tiêu đề LỚN
+
+- <p></p>:
+    + phần tử xác định 1 ĐOẠN VĂN BẢN
+
+- TRÊN TRANG WEB CÓ CÁC PHẦN (Dev tool):
+    + Element: show các code của trang
+    + Styles: xem css của trang
+    + console: code Javascript + debug trên đây
+    + Network: làm việc bên API - Phần reactjs hoặc cuối Javascript
+    + Application: javascript mới học
+
+
+#########################
+- học HTNL chỉ quan tâm tag element thôi
+- tất cả nội dung trong body mởi chỉ hiển thị lên trang web
+- Cách gõ code nhanh:
+    + html:5
+        _ show ra đoạn code gợi ý khung sườn mẫu khởi tạo có từ đủ <head></head>, <body></body>, các thẻ <meta>, <title></title>
+
+###########################
+MỘT SỐ THẺ <meta> trong HTML
+    - code bên trong head
+    - thể <meta> dùng để:
+        + khai báo thêm thông tin
+    -  <meta charset="UTF-8">:
+        + xác định bộ ký tự được sử dụng, utf-8 để hổ trợ hiển thị tiếng việt
+
+    - <meta name="keyword" content ="">:
+        + xác định từ khóa cho công cụ tìm kiếm
+
+    - <meta name="description" content="">:
+        + xác định mô tả trang web của bạn
+
+    - <meta="author" content="">:
+        + xác định tác giả trang web
+    - <meta name="viewort" content="">:
+        + đây là thẻ sẽ được giải thích trong phần css
+        + Đặt chế để xem để làm cho trang web hiển thị tốt nhất trên tất cả các thiết bị
+
+#########################
+- CÁCH TẠO COMMENT (CHÚ THÍCH):
+    + chú thích dễ nhớ, dễ nhìn
+    + hiểu được ngay đoạn code
+    + không hiển thị trên giao diện website
+    + cú pháp:
+        <!--Nội dung comment-->
+    + phím tắt:
+        + trong window: Ctrl + /
+        + trong Mac: Cmd + /
+
+########################
+1/ ELEMENT: (phần tử)
+    _ Được xác định bởi:
+        + một thẻ bắt đầu
+        + một vài nội dung
+        + nội thẻ kết thúc
+    _ cú pháp:
+        <tagname>Nội dung..</tagname>
+        + trong đó:
+            - <tagname>: thẻ bắt đầu element
+            - </tagname> thẻ két thúc element
+            - các tagname KHÔNG PHÂN BIỆT CHỮ HOA CHỮ THƯỜNG
+            ==> nên viết THƯỜNG
+
+    - thẻ elemet không có thẻ đóng như meta
+
+2/ Attribute (thuộc tính):
+    + cung cấp thông tin cho các element nằm trong THẺ MỞ
+    + 1 element có nhiều thuộc tính
+    _ cú pháp:
+        + <tagname attribute-name="value">Nội dung..</tagname>
+        + Trong đó:
+            - name: tên thuộc tính
+            - "value": giá trị thuộc tính cung cấp cho name
+
+3/ Tạo heading (tiêu đề)
+    + Là tiêu dề hoặc phụ đề để hiển thị trên web
+    + Có 6 thẻ heading từ h1->h6 trong đó <h1></h1> là quan trọng nhất và chỉ có duy nhất 1 thể h1 dùng để mô tả nội dung chính của TRANG
+    + Nếu 1 trang có nhiều thẻ <h1> thì web vẫn chạy nhưng không chuẩn SEO
+    + thẻ <h6></h6>: ÍT QUAN TRỌNG NHẤT
+    + thẻ CÀNG QUAN TRỌNG => CÀNG TO NHẤT VÀ NGƯỢC LẠI
+
+    _ Paragraph (đoạn văn):
+        + LUÔN LUÔN BẮT ĐẦU TRÊN DÒNG MỚI và thường là một KHỐI VĂN BẢN
+        + cú pháp:
+            <p>Nội dung..</p>
+        + một số thẻ liên quan:
+            _ <hr> (horizontal rules - quy tắc ngang):
+                + ngắt theo chủ dề
+                + hiển thị dưới dạng 1 ĐƯỜNG KẺ NGANG (empty tag)
+                + Không có thẻ đóng
+            - <br>:
+                + thẻ dụng để NGẮT DÒNG trong 1 ĐOẠN VĂN
+                + KHÔNG CÓ THẺ ĐÓNG
+
+    - Fomatting (Định dạng):
+        1/ <b><b> (bold):
+            + in đậm văn bản 
+        2/ <strong></strong> 
+            + văn in đậm và QUAN TRỌNG
+        3/ <i></i>(italic):
+            + in nghiêng văn bản
+        4/ <em></em> (emphasized - nhấn mạnh):
+            + in nghiên và quan trọng
+        5/ <small></small>:
+            + chữ văn bản nhỏ hơn
+        6/ <sub></sub> (subscripted - chỉ số dưới):
+            + văn bản có chỉ số ở dưới
+        7/ <sup><sup> (chỉ số trên):
+            + văn bản chỉ số TRÊN
+        8/ <ins></ins> (insert):
+            + văn bản GẠCH CHÂN
+        9/ <del></del> (delete):
+            + văn bản xóa
+        10/ <mark></mark> (marked):
+            + văn bản đánh dấu
+        

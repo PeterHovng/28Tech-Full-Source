@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Cấu trúc của thẻ form -->
+    <!-- Thuộc tính action: 
+        + xác định hành động sẽ được thực hiện khi biểu mẫu được gửi. 
+        + Giá trị là một đường dẫn
+    -->
+
+    <!-- Thuộc tính target giống trong thẻ <a> là có 2 loại:
+        - chỉ định nơi hiển thị phản hồi 
+        + _self
+        + _blank
+    -->
+
+    <!-- Thuộc tính method có 2 loại là:
+        + Pthuc GET:
+            - nối dữ liệu biểu mẫu vào URL, theo cặp name/value
+            - không được dùng để lưu password vì sẽ lộ cặp name/value vì được hiển thị trong URL khi nối vào
+            - độ dài giới hạn 2048 ký tự vì nếu vượt quá sẽ bị mất dữ liệu gửi lên
+            - Thường dùng trong thanh công cụ tìm kiếm của GG
+
+        + PThuc POST:    
+            - dữ liệu biểu mẫu không hiển thị trong URL
+            - Không giới hạn về kích thước và có sử gửi một số lượng lớn dữ liệu
+            - NHƯỢC ĐIỂM POST:
+                + Khi load lại trang web: sẽ bị mất vị trí trang web hiện tại => dùng phương thức GET để giữ lại URL trang hiện tại khi load
+    -->
+
+    <!-- 
+        Gửi dữ liệu URL để làm gì ?
+        - 
+    -->
+    <form action="https://www.w3schools.com/action_page.php" target="_blank" method="GET" autocomplete="off">
+        <!-- chỗ type="password" sẽ không hiện thi password khi nhập chi hiện dấu chấm -->
+        <input name="ho_ten" type="password">
+        <input type="submit" value="Gửi">
+    </form>
+
+    <!-- Thuộc tính autocomplete:
+        - Khi bật tính năng tự động điền, , trình duyệt sẽ tự động gợi ý các giá trị dựa trên các giá trị mà người dùng đã nhập trước đó.    
+        on - là luôn luôn bật
+        off - là tắt hiển thị những gợi ý trước đó đã nhập vào
+    -->
+
+    <!-- Thuộc tính novalidate:
+        - đặc tả dữ liệu form không cần phải kiểm tra tính chính xác dữ liệu khi gửi
+        - Ví dụ email không cần nhập đúng định dạng vẫn gửi được
+    -->
+    <p><mark>Ô dưới đây để nhập email đúng fomat mới được</mark></p>
+
+    <form action="https://www.w3schools.com/action_page.php" target="_blank" method="POST" novalidate>
+        <!-- Khi có thuộc tính novalidate
+            - thì không cần kiểm tra tính đúng đúng cửa dữ liệu form khi gửi vd như gửi email ko cần đúng fomat vẫn gửi được
+        -->
+        <input name="my_email" type="email">
+        <input type="submit" value="Gửi">
+    </form>
+
+    <!-- Form elements:
+        - <input>:
+            + hiển thị theo nhiều cách phụ thuộc vào type    
+            + Mặc định là type="text" (text bao gồm chữ và số)
+        
+        - <label>:
+            + xác định NHÃN cho một số element trong biểu mẫu -> để người dùng hiểu hơn về element đó
+            + Thuộc tính của thẻ <labeL>:
+                _ bằng thuộc tính ID của phần tử <input> để liển kết lại với nhau
+                _ Khi click và <label> -> con trỏ TỰ ĐỘNG FOCUS vào ô input
+                _ có thể áp dụng một số element khác ngoài input
+
+    -->
+
+    <p><mark>Ô dưới đây để thực hiển các loại element trong form</mark></p>
+
+    <form action="https://www.w3schools.com/action_page.php" target="_blank" method="POST" autocomplete="off"
+        novalidate>
+
+        <!-- label để biết nhãn cho người dùng nhận biết được ô input
+            - Giá trị của thuộc tính for trong label phải bằng với giá trị id của input để liên kết lại nhãn và input với nhau
+        -->
+        <label for="fullname">Họ tên: </label>
+        <!-- input mặc định type có hay không sẽ là text
+        - khi click value của for -> FOCUS con trỏ chuột vào ô input 
+        - Nếu trong for khác hoặc không cùng tên => không link vào được ô input
+        -->
+        <input id="fullname" name="ho_ten" type="text">
+
+
+        <label for="">Màu sắc: </label>
+
+        <!-- Thẻ select:
+            - Hiển thị dạng danh sách thả xuống 
+            - Các thẻ <option> xác định một tùy chọn có thể được chọn
+            - Theo mặc định, mục đầu tiên trong danh sách thả xuống sẽ được chọn
+            - Để thay đổi mặc định lựa chọn thì thêm thuộc tính “selected” vào <option> muốn chọn mặc định
+            - Sử dụng thuộc tính size để chỉ định số lượng giá trị hiển thị.
+            - Sử dụng thuộc tính “multiple” để cho phép người dùng chọn nhiều giá trị.
+        -->
+
+        <!-- thẻ select cũng phải luôn luôn có name để gửi lên server -->
+        <!-- Khi gửi lên server sẽ là cặp (namne = color, value = optopn value) -->
+
+        <!-- Thuộc tính size -> thể hiện xem có bao nhiêu option dropdown, 
+            mặc định là 1 & khi size = 1 -> dropdown 1 option
+        -->
+
+        <!--  
+            - Thuộc tính multiple cho phép chọn nhiều option bằng cách ctrl + option[i] và gửi lên server và w3school thì sử dụng pthuoc get mới gửi lên được nhiều trường option
+        -->
+
+        <select name="color" size="3" multiple>
+
+            <!-- xổ xuống ô input gổm 3 màu sắc -->
+            <!-- Các thẻ <option> xác định một tùy chọn có thể được chọn và mỗi thẻ có value -->
+
+            <!-- Theo mặc định, mục đầu tiên trong danh sách thả xuống sẽ được chọn - màu vàng-->
+            <option value="yellow">màu vàng</option>
+
+            <!-- - Để thay đổi mặc định lựa chọn thì thêm thuộc tính “selected” vào <option> muốn chọn mặc định -->
+            <option value="red" selected>màu đỏ</option>
+
+            <!-- Nếu có nhiều hơn 1 cái selected -> chọn cái cuối cùng -->
+            <option value="black">màu đen</option>
+            <option value="purple">màu tím</option>
+        </select>
+
+        <input type="submit" value="Gửi">
+    </form>
+
+    <p><mark>Thẻ textarea trong form elements dùng để nhập dữ liệu nhiều dòng</mark></p>
+    <!-- Thẻ textarea này dùng để nhập ghi chúp trên nhiều hàng và có name để gửi lên server
+        + Thuộc tính rows chỉ định số dòng hiển thị trong một vùng văn bản - mặc định 2, từ dòng rows số 6 trở đi sẽ hiển thị thanh Scroll - lấy theo hàng
+        + Thuộc tính cols chỉ định chiều rộng hiển thị của vùng văn bản - mặc định là 20 - 20 này là lấy theo ký tự
+    -->
+
+    <form action="https://www.w3schools.com/action_page.php" target="_blank" method="POST" novalidate>
+
+        <label for="take_node">Nhập ghi chú tại đây</label>
+        <textarea id="take_node" name="note" rows="2" cols="20"></textarea>
+        <!-- Đây là thể button: 
+            + xác định nút để nhấp 
+            + không nhất thiết nằm trong form
+        -->
+        <button>Gửi</button>
+
+        <!-- <input type="submit" value="Gửi"> bắt buộc phải trong form
+            - input có kiểu là submit và value = với lại content của button
+        -->
+    </form>
+
+    <p><mark>trong form này dùng để thể hiện các kiểu của thẻ input</mark></p>
+    <!--  
+        Input types
+            <input type="text">: Dùng để nhập text.
+            <input type="email">: Dùng để nhập email.
+            <input type="password">: Dùng để nhập mật khẩu.
+            <input type="number">: Dùng để nhập số, không nhập được chữ cái.
+            <input type="date">: Dùng để chọn: năm, tháng, ngày.
+            <input type="time">: Dùng để chọn: giờ, phút, giây.
+            <input type="datetime-local">: Dùng để chọn: năm, tháng, ngày, giờ, phút, giây.
+            <input type="file">: Dùng để tải file lên.
+            <input type="checkbox">: Các hộp kiểm cho phép người dùng chọn KHÔNG hoặc NHIỀU tùy chọn trong số các lựa chọn hạn chế
+    -->
+
+
+    <form action="https://www.w3schools.com/action_page.php" target="_blank" method="get" novalidate>
+        <label for="pass">Nhập mật khẩu tại đây</label>
+        <input id="pass" name="mat_khau" type="password">
+
+        <label for="so_luong_hang">Nhập số lượng tại đây</label>
+        <input id="so_luong_hang" name="so_luong" type="number">
+
+        <h3>Nhập thông tin chuyến bay</h3>
+        <label for="thoi_gian_di">Nhập thời gian bay:</label>
+        <input id="thoi_gian_di" name="ThoiGianDi" type="time">
+
+        <label for="thoi_gian_ve">Nhập thời gian hạ cánh:</label>
+        <input id="thoi_gian_ve" name="ThoiGianVe" type="time">
+
+        <br>
+
+        <label for="ngay_di">Nhập ngày đi</label>
+        <input id="ngay_di" name="NgayDi" type="date">
+
+        <label for="ngay_ve">Nhập ngày về</label>
+        <input id="ngay_ve" name="NgayVe" type="date">
+
+        <br>
+
+        <label for="thoi_gian_ngay_di">Nhập thời gian và ngày bay:</label>
+        <input id="thoi_gian_ngay_di" name="ThoiGian_NgayDi" type="datetime-local">
+
+        <label for="thoi_gian_ngay_ve">Nhập thời gian và ngày tới:</label>
+        <input id="thoi_gian_ngay_ve" name="ThoiGian_NgayVe" type="datetime-local">
+
+        <h4>Nhập file cần tải lên</h4>
+        <input name="upload_file" type="file">
+
+        <p><mark>vui lòng nhấn tại đây để xác nhận</mark></p>
+        <button>Xác nhận😊</button>
+    </form>
+
+
+    <!-- Nhập loại thẻ checkbox form:
+            <input type="checkbox">: Các hộp kiểm cho phép người dùng chọn KHÔNG hoặc NHIỀU tùy chọn trong số các lựa chọn hạn chế.
+        -->
+
+    <form action="https://www.w3schools.com/action_page.php" target="_blank" method="get" autocomplete="off"
+        novalidate>
+
+        <!-- type checkbos sẽ nhận nhiều lựa chọn khi method = get còn nếu method = pos sẽ nhận lựa chọn cuối cùng -->
+            
+        <p><mark>Những ngôn ngữ bạn đã học (dùng checkbox):</mark></p>
+
+        <input type="checkbox" id="NgonNguC" name="language" value="C">
+        <label for="NgonNguC">Ngôn ngữ C</label>
+        
+        <br>
+        
+        <input type="checkbox" id="NgonNguC++" name="language" value="C++">
+        <label for="NgonNguC++">Ngôn ngữ C++</label>
+        
+        <br>
+        <input type="checkbox" id="NgonNguJava" name="language" value="Java">
+        <label for="NgonNguJava">Ngôn ngữ Java</label>
+        
+        <br>
+        <input type="checkbox" id="NgonNguPython" name="language" value="Python">
+        <label for="NgonNguPython">Ngôn ngữ Python</label>
+        
+        <p><mark>Chọn ngôn ngữ bạn thích nhất (dùng radio chỉ được chọn 1):</mark></p>
+        <!-- type = radio:
+            <input type="radio">: Các nút radio cho phép người dùng CHỈ chọn MỘT trong số các lựa chọn
+        -->
+        <!-- Phải đổi id của các ngôn ngữ vì bị trùng -->
+        <input type="radio" id="NgonNguCC" name="language" value="C">
+        <label for="NgonNguCC">Ngôn ngữ C</label>
+        
+        <br>
+        
+        <input type="radio" id="NgonNguCC++" name="language" value="C++">
+        <label for="NgonNguCC++">Ngôn ngữ C++</label>
+        
+        <br>
+
+        <input type="radio" id="NgonNguJavaa" name="language" value="Java">
+        <label for="NgonNguJavaa">Ngôn ngữ Java</label>
+        
+        <br>
+
+        <input type="radio" id="NgonNguPythonn" name="language" value="Python">
+        <label for="NgonNguPythonn">Ngôn ngữ Python</label>
+
+        <br>
+
+        <button>Xác nhận😊</button>
+
+        <!-- <input type="range">: 
+            Tạo thanh trượt giá trị. Phạm vi mặc định là từ 0 đến 100. Step mặc định là 1.
+            - Như thanh trượt âm lượng
+        -->
+        <br>
+        <p>Chọn độ khó của bài</p>
+        <input type="range" name="volume" min="0" max="100" step="20">
+        <input type="submit" value="Gửi">
+        
+        <p>Chọn màu bạn thích:</p>
+        <input type="color" name="color">
+        <input type="submit" value="Gửi">
+    
+        <!-- 
+            Các thuộc tính của thẻ input:
+                + value: Thuộc tính value chỉ định giá trị ban đầu cho trường đầu vào
+                + là khi mở web sẽ có sẵn giá trị mặc định khi nhập input
+        -->
+        <br>
+        <p>Nhập họ tên</p>
+        <input type="text" name="ho_ten" value="Nguyen Van A">
+        
+        <!-- readonly
+        + Thuộc tính readonly xác định rằng trường đầu vào là chỉ đọc.
+        + Giá trị của trường readonly sẽ được gửi khi gửi biểu mẫu.
+        -->
+        <p>Nhập cccd</p>
+        <input type="text" name="cccd" value="0123456789" readonly>
+        <br>
+        
+        <!-- disabled
+        + Thuộc tính disabled chỉ định rằng một trường đầu vào sẽ bị vô hiệu hóa.
+        + Giá trị của trường disabled sẽ không được gửi khi gửi biểu mẫu.
+        -->
+        <input type="email" name="email" value="nvanh@gmail.com" disabled>
+        
+        <!-- maxlength:Thuộc tính maxlength chỉ định số lượng ký tự tối đa được phép trong một trường đầu vào.
+        -->
+        <p>Nhập số dth</p>
+        <input type="text" name="cccd" value="0123456789" maxlength="10">
+
+        <p>Input kiểu number dành cho thuộc tính thẻ max và min</p>
+        <!-- min và max: chỉ định các giá trị tối thiểu và tối đa cho một trường đầu vào.
+            -->
+        <input type="number" name="so_luong" min="1" max="99">
+
+        <!-- multiple: xác định rằng người dùng được phép nhập nhiều hơn một giá trị vào trường đầu vào.
+                Áp dụng cho kiểu email, file.
+        -->
+
+        <p>Thẻ planceholder:</p>
+        <!-- placeholder: chỉ định một gợi ý ngắn để mô tả giá trị dự kiến ​​của trường đầu vào.
+            Có thể thay thế cho label gợi ý cho người dùng biết nhập gì
+        -->
+        <!-- <input type="text" name="ho_ten" placeholder="Họ tên"> -->
+        
+        <!-- required: xác định rằng trường đầu vào phải được điền trước khi gửi biểu mẫu.
+        - Yêu cầu người dùng phải nhập mới gửi lên server được
+        -->
+        <input type="text" name="ho_ten" placeholder="Họ tên" required>
+
+        
+        <br>
+        <input type="submit" value="Gửi">
+    </form>
+
+    <!-- Những tính năng HTML5 có mà HTML không có
+        HTML5 được tích hợp video và âm thanh trong khi HTML thì không có.
+    HTML5 Có thêm các thẻ semantic mới: <header>, <footer>, <article>, <section>, <nav>, ....
+    Cung cấp các kiểu input mẫu mới như: date, time, email,...
+    Thẻ <canvas> giúp cho việc vẽ sơ đồ 2D
+    Hỗ trợ CSS3
+    -->
+
+    <!-- Link bài tập vn:
+        https://frontend.daca.vn/lessons/lesson-3/index.html    
+    -->
+
+</body>
+
+</html>

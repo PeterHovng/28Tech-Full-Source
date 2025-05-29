@@ -1,0 +1,225 @@
+1/ Thẻ <a></a>: (anchor - mỏ neo):
+    - Mục đích: chèn link
+    - là thẻ để khi click vào thẻ đó sẽ chuyển hướng đến trang khác
+    - cú pháp:
+        <a href="url">Text</a>
+    - Thuộc tính:
+        + href (Hypertext Reference - tài liệu tham khảo siêu văn bản):
+            _ thuộc tính xác định địa chỉ liên kết
+        + target: thuộc tính xác định nơi tài liệu được mở
+            _self: Mặc định - mở trong tab hiện tại
+            _ blank: mở trong tab mới
+        + title: Thông tin bổ sung về mọt element
+
+2/ Thể <img />: (insert image):
+    - Mục đích: nhúng ảnh vào trang web
+    - Thể img: 
+        + là thẻ TRỐNG
+        + chỉ chứa thuộc tính
+        + Không có thể đóng
+    - Cú pháp:
+        + <img src="duong-dan-hinh-anh.jpg" alt="Mô tả hình ảnh">
+    - Thuộc tính: (2 cái):
+        + src (source - nguồn):
+            _ chèn đường dẫn hình ảnh
+        + alt (alternate - thay thế):
+            _ Văn bản thay thế cho hình ảnh
+            _ hiển thị khi đường dẫn hình ảnh bị LỖI
+
+3/ File Paths (Đường dẫn):
+    - Có 2 loại đường dẫn:
+        + Absolute File Paths (Đường dẫn tuyệt đối):
+            _ Là URL ĐẦY ĐỦ của tệp
+        + Relative File Paths (Đường dẫn tương đối):
+            _ Đường dẫn tệp tương đối TRỎ đến 1 TỆP LIÊN QUAN trang HIỆN tại
+            VD:
+                _ <img src="logo.png" alt="Logo>: 
+                    File "logo.png" nằm trong cùng thư mục với trang hiện tại
+                - <imt src="images/logo.png">: 
+                    File "logo.png" nằm trong thư mục images trong THƯ MỤC HIỆN TẠI
+                - <img src="/images/logo.png">:
+                    File "logo.png" nằm trong thư mục images ở THƯ MỤC GỐC của trang web hiện tại
+                - <img src="../logo.png">:
+                    File "logo.png" nằm trong thư mục TĂNG 1 CẤP so với thư mục hiện tại
+
+4/ Thẻ <video> (Chèn video):
+    - Thẻ <video></video>:
+        + để nhúng video vào trang web
+    - Trong thẻ video có thẻ <source> (KHÔNG CÓ THỂ ĐÓNG)để đưa:
+        + đường dẫn file video
+        + Kiểu video
+    - Cú pháp:
+        + <video width="320"heigh="240" controls>
+            <source src="link-video.mp4" type="video/mp4">
+          </video>
+        + Ở ĐÂY:
+            _ width là chiều rộng pixel của video: kích thước tùy ý
+            _ height là chiều cao pixel của video: kích thước tùy ý
+                => Thông thường width: 16 còn height: 9
+    - THUỘC TÍNH:
+        + width/height: Chiều cao và chiều rộng video
+            => Nếu không có để thuộc tính này => web có thể BỊ NHẤP NHẢY trong khi TẢI video
+        + controls:
+            Thuộc tính điều khiển như bật, tạm dừng, âm lượng, cài đặt
+        + loop: 
+            Lặp lại video khi video kết thúc
+        + src:
+            Đường dẫn vide0
+        + type: 
+            _ Kiểu video
+            _ Có 3 loại (mp4, ogg, webm)
+        + autoplay: 
+            _ Tự động phát video
+        + muted:
+            Tắt tiếng
+        
+    LƯU Ý THUỘC TÍNH:
+        _ Đoạn văn bản ở trong thẻ video CHỈ HIỂN THỊ KHI TRÌNH DUYỆT KHÔNG HỖ TRỌ THẺ video
+        - Trên trình Chrome KHÔNG CHO PHÉP TỰ ĐỘNG PHÁT VIDEO.
+        - Nếu muốn TỰ ĐỘNG PHÁT (autoplay) => PHẢI THÊM THUỘC TÍNH MUTED
+        - mỗi thuộc tính cách nhau bởi 1 DẤU CÁCH là được
+
+5/ Thẻ <audio> (chèn audio):
+    _ Thẻ <audio></audio> 
+    _ dùng để nhúng audio vào trang web
+    - Trong thẻ audio có thẻ <source>:
+        + chứa đường dẫn file audio
+        + kiểu audio
+    _ Cú pháp:
+        <audio controls>
+            <source src="link-audio.mp3" type="audio/mpeg">
+        </audio>
+    
+    - Thuộc tính:
+        + controls:
+            Thuộc tính điều khiển: bật, tạm dừng, giảm âm lượng, cài đặt,..
+        + loop:
+            Lặp lại video
+        + src:
+            đường dẫn audio
+        + type:
+            Kiểu video: (mpeg - là mp3)
+                        (ogg,  webm, mav)
+        + Trên trình Chrome KHÔNG CHO PHÉP TỰ ĐỘNG PHÁT VIDEO.
+        + Nếu muốn TỰ ĐỘNG PHÁT (autoplay) => PHẢI THÊM THUỘC TÍNH MUTED
+        + mỗi thuộc tính cách nhau bởi 1 DẤU CÁCH là được
+    
+6/ Thẻ <table></table> (chèn bảng)
+    _ tạo bảng trong HTML
+    <table> // thẻ table để bọc bảng
+        <thead> // header
+            <tr> // hàng
+                <th> // cột
+                
+                </th> 
+            <tr>
+
+        <thead>
+        <tbody> // thân hàng thông tin
+            <tr> // số hàng
+                <td> Nội dụng </td> cột
+
+            </tr>
+        <tbody>
+    <table>
+
+    - Ý NGHĨA CÁC THẺ:
+        + <table></table>:
+            _ xác định một bảng
+        + <thead></thead>:
+            _ Phần đầu bảng
+        + <tbody></tbody>:
+            _ phần thân bảng
+        + <tr></tr> (table row): 
+            _ xác định một hàng của bảng
+        + <th></th>(table header):
+            _ xác định tiêu đề của bảng
+        + <td></td> (table data):
+            _ xác định dữ liệu ô của bảng
+
+    - THUỘC TÍNH:
+        + colpan:
+            _ tạo ô mở rộng trên nhiều cột
+        + rowspan:
+            _ tạo ô kéo dài trên nhiều hàng
+
+7/ Thẻ <ul>, <ol> (Chèn danh sách):
+    - Kiểu <ul></ul> (Unordered List - Không sắp xếp):
+        + Các mục con của nó sẽ không được đánh số
+        + Chỉ được đánh dấu bằng hình tròn
+        + Cú pháp:
+            <ul>
+                <li>Mục 1</li> 
+                <li>Mục 2</li> 
+                <li>Mục 3</li> 
+            </ul>
+        + Ý NGHĨA CÁC THẺ:
+            _ <ul></ul> (Unorderd List): Danh sách hiển thị kiểu không được đánh số
+            _ <li></li> (List Item): Một mục trong danh sách
+
+        + Một số thuộc tính của ol (THAY ĐỔI CHỮ CÁI ĐÁNH DẤU SẮP XẾP - QUAN TRỌNG)
+        - type="1": Mặc định. Các mục đánh dưới dạng số
+        - type="A": Các mục đánh dưới dạng chữ hoa
+        - type="a": Các mục đánh dưới dạng chữ thường
+        - type="I": Các mục đánh dưới dạng số La Mã viết HOA
+        - type="i": Các mục đánh dưới dạng số la Mã viết THƯỜNG
+
+8/ Phân biệt kiểu hiển thị của element: (block và inline)
+    - Kiểu block (khối):
+        + Thẻ block luôn bắt đầu trên hàng mới
+        + Trình duyệt tự động thêm 1 khoảng trống trước và sau element
+        + Chiếm toàn bộ chiều rộng có sẵn
+    - Một số thẻ dạng block:
+        + <address>, <article>, <aside>, <blockquote>, <canvas>, <dd>, <div>, <dl>, <dt>, <fieldset>, 
+        <figcaption>, <figure>, <footer>, <form>, <h1>-<h6>, <header>, <hr>, <li>, <main>, <nav>, 
+        <noscript>, <ol>, <p>, <pre>, <section>, <table>, <tfoot>, <ul>.
+
+    - Kiểu inline (nội tuyến - trong hàng):
+        + Không bắt đầu trên dòng mới, chiều rộng bằng với chiều rộng của element
+    - Một số thẻ inline:
+        + <a>, <abbr>, <acronym>, <b>, <bdo>, <big>, <br>, <button>, <cite>, <code>, <em>, <i>, <img>,
+        <input>, <kbd>, <label>, <map>, <object>, <output>, <q>, <samp>, <script>, <select>, <small>, <span>, <strong>, <sub>,<sup>, <textarea>, <time>, tt>, Var>
+
+    - Quy tắc đảm bảo mô hình nội dung HTML
+        + Phần tử cấp độ inline không được chứa phần tử cấp độ block
+        + Inline chỉ chứa dữ liệu hoặc các phần tử inline khác
+        + Phần tử block thì được chứa các phần tử block, inline, dữ liệu.
+        + Có trường hợp ngoại lệ là thẻ <a> (kiểu inline) nhưng có thể chứa phần tử kiểu block
+
+
+9/ Class và id
+    - Class:
+        + Thuộc tính này dùng để xác định một hoặc nhiều tên lớp cho phần tử HTML
+        + Tên lớp có thể dùng trong CSS hoặc Js để thực hiện một số tác vụ cho phần tử có tên lớp đó
+        _ Tính chất:   
+            + Một class có thể áp dụng cho nhiều element, và các element không nhất thiết cùng loại thẻ
+            + Một element có thể thêm được nhiều class
+            + Thuộc tính class có thể được sử dụng ở bất kỳ phần tử nào trong HTML
+            + Tên lớp CÓ PHÂN BIỆT HOA THƯỜNG
+            + Không được đặt số đứng đầu
+    
+    - Id:
+        + Thuộc tính dùng để xác định một id DUY NHẤT cho MỘT element
+        _ Tính chất:
+            + Trong một trang các element KHÔNG ĐƯỢC PHÉP TRÙNG TÊN của id
+            + Tên id có thể dùng trong CSS hoặc js để thực hiện tác vụ nhất định cho phần tử có tên id đó
+            + Tên id CÓ PHÂN BIỆT CHỮ HOA THƯỜNG
+            + LƯU Ý:
+                _ Tên id phải chứa ÍT NHẤT 1 KÝ TỰ
+                _ KHÔNG bắt đầu bằng số
+                _ KHÔNG chứa KHOẢNG TRẮNG, (DẤU CÁCH, TAB,...)
+
+    - QUY TẮC ĐẶT TÊN CLASS VÀ ID (GIỐNG NHAU):
+        + Ký tự chữ cái viết thường: a->z
+        + Ký tự chữ cái viết hoa: A->Z
+        + Ký tự chữ số: 0->9
+        + Dấu gạch dưới: _
+        + Dấu gạch nối: -
+        LƯU Ý (tên class và it TUYỆT ĐỐI):
+            _  KHÔNG chứ ký tự đặc biệt như: !@#$%^&
+            _ KHÔNG BẮT ĐẦU bằng số 0->9
+    - PHÂN BIỆT CLASS VÀ ID
+    _ class:                                                        - id:
+        + Một phần tử có thể nhận 1 hoặc nhiều class            |   + Một phần tử chỉ nhận duy nhất 1 id
+        + Một tên class có thể đặt cho nhiều phần tử khác nhau  |   + Một tên id chỉ dùng để đặt tên cho 1 phần tử duy nhất
+        + Khi chọn 1 phần tử theo class cú pháp: .ten-class     |   + Khi chọn 1 phần tử theo id cú pháp: #ten-id

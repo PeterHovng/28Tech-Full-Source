@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1/ THẺ <a> -->
+    <!-- chỗ Tại đây chèn thẻ <a></a> vào để dẫn đến đường link khi ta click vào chữ Tại đây -->
+    <!-- href: là thuộc tính và "" là giá trị của thuộc tính href đấy và là 1 đường dẫn - đường link  -->
+    <!-- 
+        _target: là thuộc tinh xác định nơi để mở link đường dẫn đó
+        Có 2 thuộc tính target: 
+            + _self: là mở đường link tại tab hiện tại
+            + _blank: là mở đường link tại tab mới
+        _ title: là thuộc tính mô tả bổ sung thông tin cho một element
+    -->
+
+    <!-- Dưới đây là thuộc tính target(mặc định) là mở tại chính trang hiển tại -->
+    <p>Xem tài liệu: <a href="https://www.google.com/" target="_self"
+            title="Đây là link sang trang Google mở định tại tab hiện tại">Tại đây</a></p>
+
+    <!-- Duối đây là thuộc tính target là mở tại tab mới -->
+    <p>Xem tài liệu <a href="https://www.google.com/" target="_blank"
+            title="Đây là link sang trang Google mở trong tab mới">Tại đây</a></p>
+    <br>
+    <!-- 2/ Thể <img> -->
+    <!-- Đây là chèn thể <img> chèn thẻ ảnh 
+        - Thuộc tính src: nguồn để chèn đường dẫn hình ảnh
+        - Thuộc tính alt: văn bản hiển thị thay thể khi src bị lỗi
+    -->
+    <p>Đây là đường dẫn ảnh hoàn toàn bình thường qua <b>thuộc tính src</b> - <mark>Đây là <strong>đường dẫn tuyệt đối
+                người khác có thể xem được</strong></mark></p>
+    <img src="https://th.bing.com/th/id/OIP.b0olhzM4Uxh-QTdGQvIfeQAAAA?rs=1&pid=ImgDetMain" />
+
+    <p>Đây là đường dẫn ảnh bị lỗi và thay thế bằng <b>thuộc tính alt</b></p>
+    <img src="https://th.bing.co/id/OIP.b0olhzM4Uxh-QTdGQvIfeQAAAA?rs=1&pid=ImgDetMain"
+        alt="Đây là ảnh về logo Trường UIT" />
+
+    <br>
+    <!-- Đây là đường dẫn tương đối Người khác không xem trực tiếp được-->
+    <p><mark>LƯU Ý: <strong>ĐƯỜNG DẪN TƯƠNG ĐỐI NGƯỜI KHÁC SẼ KHÔNG XEM ĐƯỢC </strong>CÒN ĐƯỜNG DẪN TRUYỆT ĐỐI NGƯỜI
+            KHÁC CÓ THỂ XEM TRỰC TIẾP TRÊN LINK WEB</mark></p>
+
+    <p>Đây là File ảnh <mark>cùng cấp trong Folder với trang hiện tại</mark> - Là đường dẫn <b>tương đối</b></p>
+    <img src="image.jpg" alt="">
+
+
+    <!-- Đây là đường dẫn khi Folder images cùng cấp với trang web hiện tại -->
+    <p>Đây là ảnh <mark>nằm trong thư mục images trong cùng thư mục trang hiện tại</mark> - Là đường dẫn <b>tương
+            đối</b></p>
+    <img src="images/image-2.png" atl="">
+
+    <!-- Đây là đường dẫn image trong thư mục và thư mục chứ image cùng với trang web hiện tại khi truy cập từ thư mục gốc -->
+    <P>Đây là hình ảnh nằm trong thư mục images trong cùng thư mục của trang hiện tại và <mark>truy cập từ thư mục
+            gốc</mark> - Là đường dẫn <b>tương đối</b></P>
+    <img src="/src/Bai_02/images/image-2.png" alt="">
+    <br>
+
+    <!-- 
+        Đây là đường dẫn khi image nằm cấp cao hơn 1 mức với  trang web hiện tại 
+        Mỗi lần ra ngoài thư mục 1 lần thì ../ 1 lần
+    -->
+    <p>Đây là ảnh <mark>nằm trong thư mục tăng 1 cấp so với trang hiện tại</mark> - Là đường dẫn <b>tương đối</b></p>
+    <img src="../image-3.png" alt="">
+
+    <br>
+    <!-- Đây là sự kết hợp khi nhấn logo ảnh => link sang trang web chính chủ bằng kết hợp giữ thẻ a và thể img -->
+    <p>Đây là đường dẫn kết hợp thẻ <mark>a và File path</mark> - Khi <b>nhấn vào logo img</b> sẽ link để trang chủ
+        28tech bằng các tạo 1 tab mới link đến trang 28tech.</p>
+
+    <a href="https://www.28tech.com.vn/" target="_blank">
+        <img src="https://cdn-main.28tech.com.vn/media/core/logo-28tech.svg" alt="Đây là trang chủ trang 28tech">
+    </a>
+
+    <br>
+    <!-- Đây là chèn thẻ video và có thuộc tính controls để điều khiển video và khi có thuộc tính loop thì video sẽ tự động chạy lại từ đầu khi kết thức-->
+    <p>Đây là chèn video vào trong trang web và có thuộc tính controls thì mới điều kiển được video và có thuộc tính
+        loop video sẽ phát lại từ đây khi kết thúc như một vòng lặp, Và muốn thuộc tính autoplay trong Chrome thì phải
+        thêm thuộc tính muted</p>
+    <video width="320" height="240" controls loop autoplay muted>
+        <!-- Sẽ giải thích kĩ vì sao type lại ghi là video/mp4 thay vì ghi trực tiếp mp4 -->
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <br>
+    <!-- Đây là thẻ chèn audio vào trang web -->
+    <p>Đây là chèn thẻ audio vào trong web và có thuộc tính controls để điều khiển audio - <mark>là loại mp3 thì dùng
+            type mpeg</mark> và có thuộc tính autoplay thì phải có thuộc tính muted theo chính sách Chrome</p>
+
+    <audio controls loop autoplay muted>
+        <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Nhúng iframe 
+        - thẻ<iframe></iframe>: hiển thị 1 trang web trong trang web
+        - Cú pháp:
+            <iframe src="url" title="decription" height="200" width="300"></iframe>
+        - Mục tiêu cho một liên kết:
+            + Thuộc tính target của liên kết phải tham chiếu đến thuộc tính name của iframe
+        - Lưu ý: Một số trang như google.com không cho phép nhúng iframe, 
+        nên sẽ thấy thông báo từ chối kết nối, chỉ những trang nào cho phép nhúng vào thì ta mới nhúng được
+    -->
+
+    <!-- Nhúng trang 28tech vào trang của mình vẫn hoạt động trên trang 28tech bình thường -->
+    <iframe src="https://khoahoc.28tech.com.vn/khoa-hoc-online" title="Đây là trang khóa học 28tech" width="1200" height="500" ></iframe>
+
+    <!-- Nhúng 1 video ytb vào trang web và xài bình thường bằng cách vô ytb bằng chia sẽ => Chọn nhúng và copy thẻ iframe của video chia sẽ pass vào -->
+    <p><b>Nhúng thẻ iframe video từ ytb vào trang web</b></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/UueAxRLKpzs?si=Lvk6PfYI2lRs0NL2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <!-- Nhúng vị trí của google map thông qua thẻ iframe vào trang web mình -->
+    <p><b>Nhúng thẻ iframe google map vị trí vào trang web</b></p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.6346172882304!2d106.72643772469816!3d10.83924868931335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527d6d5e36557%3A0xd7baf78235d3f596!2za2h1IHBo4buRIDYsIEhpZXAgQmluaCBDaGFuaCwgVGjhu6cgxJDhu6ljLCBIbyBDaGkgTWluaCBDaXR5LCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1721044488749!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <!-- Trang google.com thì bị chặn không cho phép ta nhúng trang của họ vào -->
+    <p><b>Nhúng thẻ iframe google.com vào trang web thì bị chặn</b></p>
+    <iframe src="https://www.google.com/" title="Trang web google.com" width="1200" height="500"></iframe>
+
+    <!-- Thuộc tính target liên kết tham chiếu đến thuộc tính name của iframe -->
+    <iframe src="https://www.bing.com/" name="web_bing" width="1000" height="600"></iframe>
+
+    <!-- Thay thẻ iframe bằng link cốc cốc BẰNG THUỘC TÍNH target 
+        - Nghĩa là lấy href của cốc cốc thay cho src trong thể iframe
+        - Nghĩa là khi bấm vào dòng chữ tìm kiếm trên cốc cốc thì sẽ thay thể thẻ iframe của bing sang có thẻ link cốc cốc   
+    -->
+    <p><a href="https://coccoc.com/search" target="web_bing"> Tìm kiếm trên cốc cốc</a></p>
+</body>
+
+</html>

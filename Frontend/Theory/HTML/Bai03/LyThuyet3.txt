@@ -1,0 +1,67 @@
+1/ Nhúng Iframe
+    - Thẻ <iframe></iframe> được sử dụng để hiển thị một trang web trong một trang web.
+    - Cú pháp:
+        <iframe src="url" title="description" height="200" width="300"></iframe>
+    - VD:
+        <iframe src="https://daca.vn/" title="Website Daca" width="1200" height="600"></iframe>
+        <iframe src="https://khoahoc.28tech.com.vn/" title="Website 28Tech" width="1200" height="600"></iframe>
+
+    - Mục tiêu cho một liên kết
+        + Thuộc tính target của liên kết phải tham chiếu đến thuộc tính name của iframe.
+    Ví dụ:
+        <iframe src="https://www.bing.com/" name="web_bing" width="1000" height="600"></iframe>
+        <p><a href="https://coccoc.com/search" target="web_bing">Tìm kiếm trên Cốc Cốc</a></p>
+
+    - Lưu ý: Một số trang như google.com không cho phép nhúng iframe, nên sẽ thấy thông báo từ chối kết nối, chỉ những trang nào cho phép nhúng vào thì ta mới nhúng được.
+
+2/ Thẻ semaitc:
+    - Dịch ra là ngữ nghĩa. Là những thẻ có nội dung bên trong có ý nghĩa tương ứng với tên thẻ đó.
+    - Một số thẻ Semantic:
+        + <article>: Xác định nội dung độc lập, khép kín    (Hay sử dụng)
+        + <aside>: Xác định nội dung ngoài nội dung trang   (Hay sử dụng)
+        + <details>: Xác định các chi tiết bổ sung mà người dùng có thể xem hoặc ẩn
+        + <summary>: Xác định tiêu đề hiển thị cho phần tử <details>
+        + <figcaption>: Xác định chú thích cho phần tử <figure>
+        + <figure>: Chỉ định nội dung độc lập, như hình minh họa, sơ đồ, ảnh, danh sách mã, v.v.
+        + <header>: Chỉ định tiêu đề cho một tài liệu hoặc section (Hay sử dụng)
+        + <footer>: Xác định chân trang cho tài liệu hoặc section  (Hay sử dụng)
+        + <main>: Chỉ định nội dung chính của một tài liệu  (Hay sử dụng)
+        + <mark>: Xác định văn bản được đánh dấu / nhấn mạnh 
+        + <nav> (navigation - dẫn đường): Xác định các liên kết điều hướng  (Hay sử dụng)
+        + <section>: Xác định một phần trong tài liệu  (Hay sử dụng)
+        + <time>: Xác định ngày / giờ
+
+3/ form:
+    - Là một biểu mẫu HTML được sử dụng để thu thập thông tin đầu vào của người dùng. Đầu vào của người dùng thường được gửi đến máy chủ để xử lý.
+    - VD:  
+        <form action="">
+              <label for="fullName">Họ tên:</label>
+              <br />
+              <input type="text" id="fullName" name="full_name" />
+              <br />
+              <label for="email">Email:</label>
+              <br />
+              <input type="text" id="email" name="email" />
+              <br /><br />
+              <input type="submit" value="Gửi" />
+        </form>
+
+    - Form Attributes (Những thuộc tính của form)
+        + action: 
+            _ Thuộc tính action xác định hành động sẽ được thực hiện khi biểu mẫu được gửi. 
+            _ Giá trị là một đường dẫn. Thông thường, dữ liệu biểu mẫu được gửi đến tệp trên máy chủ khi người dùng nhấp vào nút gửi.
+
+        + target: 
+            _ Thuộc tính target chỉ định nơi hiển thị phản hồi nhận được sau khi gửi biểu mẫu.
+
+        + method: 
+            _ chỉ định giao thức HTTP sẽ được sử dụng 
+            _ Có 2 phương thức là GET và POST:
+                # Phương thức GET:
+                    + Nối dữ liệu biểu mẫu vào URL, theo cặp name/value
+                    + KHÔNG BAO GIỜ sử dụng GET để gửi dữ liệu bảo mật. Như tài khoản, mật khẩu
+                    + Độ dài của URL bị giới hạn (2048 ký tự)
+
+                # Phương thức POST:
+                    + Dữ liệu biểu mẫu đã gửi không được hiển thị trong URL
+                    + POST không có giới hạn về kích thước và có thể được sử dụng để gửi một lượng lớn dữ liệu

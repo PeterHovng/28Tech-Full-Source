@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Thẻ p là thẻ block -->
+    <!-- 
+        + Thẻ block luôn bắt đầu trên hàng mới
+        + Trình duyệt tự động thêm 1 khoảng trống trước và sau element
+        + Chiếm toàn bộ chiều rộng có sẵn
+    -->
+    <p>Xin chào bạn 1</p>
+    <p>Xin chào bạn 2</p>
+
+    <!-- Đây là các thẻ inline -->
+    <b>Xin chào bạn 1</b>
+    <b>Xin chào bạn 2</b>
+
+    <!-- Lưu ý
+        - Quy tắc đảm bảo mô hình nội dung HTML
+            + Phần tử cấp độ inline không được chứa phần tử cấp độ block
+            + Inline chỉ chứa dữ liệu hoặc các phần tử inline khác
+            + Phần tử block thì được chứa các phần tử block, inline, dữ liệu.
+            + Có trường hợp ngoại lệ là thẻ <a> (kiểu inline) nhưng có thể chứa phần tử kiểu block
+    -->
+
+    <!-- Đây là đúng yêu cầu -->
+    <p>Xin chào <b>Bạn</b></p>
+
+    <!-- Đây là sai yêu cầu -->
+    <b>Xin chào <p>Bạn</p></b>
+
+    <!-- Trường hợp thẻ <a> là inline có thể chứa thẻ block khác -->
+</body>
+
+</html>

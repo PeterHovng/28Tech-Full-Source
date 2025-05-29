@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Một class có thể áp dụng cho nhiều element và các element không nhất thiết cùng thẻ -->
+    <style>
+        .color-red {
+            color: red;
+        }
+        .color-blue {
+            color: blue;
+        }
+        .font-big {
+            font-size: 20px;
+        }
+    </style>
+
+    <h1 class="color-red">Nội dung thẻ h1</h1>
+    <p class="color-red">Nội dung thẻ p</p>
+
+    <!-- Một element có thể có nhiều class -->
+    <p class="color-blue font-big">Nội dung element có thể có nhiều class gồm class color-blue và class font-big</p>
+    <p class="color-blue font-BIG">Nội dung element có thể có nhiều class gồm class color-blue và class font-BIG NÊN CLASS CÓ PHÂN BIỆT HOA THƯỜNG</p>
+
+    <!-- 
+        Đây là tên id duy nhất không được trùng trong trang web 
+        Nếu bị trùng thì vẫn bị chạy được nhưng khi học Js thì không lấy ra element có id duy nhất
+    -->
+    <h2 id="color-blue">Thẻ h2 có id color-blue</h2>
+    <!-- 
+        + Thuộc tính dùng để xác định một id DUY NHẤT cho MỘT element
+        _ Tính chất:
+            + Trong một trang các element KHÔNG ĐƯỢC PHÉP TRÙNG TÊN của id
+            + Tên id có thể dùng trong CSS hoặc js để thực hiện tác vụ nhất định cho phần tử có tên id đó
+            + Tên id CÓ PHÂN BIỆT CHỮ HOA THƯỜNG
+            + LƯU Ý:
+                _ Tên id phải chứa ÍT NHẤT 1 KÝ TỰ
+                _ KHÔNG bắt đầu bằng số
+                _ KHÔNG chứa KHOẢNG TRẮNG, (DẤU CÁCH, TAB,...)
+    -->
+</body>
+
+</html>

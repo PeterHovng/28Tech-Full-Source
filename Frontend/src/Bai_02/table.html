@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Dùng css tạo khung viền bảng -->
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 10px;
+        }
+    </style>
+
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Họ tên</th>
+                <th>SDT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Lê Văn An</td>
+                <td>0987654321</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Nguyễn Văn Tèo</td>
+                <td>123456789</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Basic HTML Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th><b>Level1</b></th>
+                <th><b>Level2</b></th>
+                <th><b>Level3</b></th>
+                <th><b>Info</b></th>
+                <th><b>Name</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="6">System</td>
+                <td rowspan="4">System Apps</td>
+                <td rowspan="3">SystemEnv</td>
+                <td>App Test</td>
+                <td>foo</td>
+            </tr>
+            <tr>
+                <td>App Memory</td>
+                <td>fo</td>
+            </tr>
+            <tr>
+                <td>App Test</td>
+                <td>bar</td>
+            </tr>
+            <tr>
+                <td>SystemEnv2</td>
+                <td>App Test</td>
+                <td>bar</td>
+            </tr>
+            <tr>
+                <td rowspan="2">System Memory</td>
+                <td rowspan="2">Memory Test</td>
+                <td>Memory Func</td>
+                <td>foo</td>
+            </tr>
+            <tr>
+                <td>Apes Test</td>
+                <td>foo</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <h2>Table 2</h2>
+    <table>
+
+        <head>
+            <style>
+                .center-text {
+                    text-align: center;
+                }
+
+                .right-text {
+                    text-align: right;
+                }
+            </style>
+        </head>
+        <tbody>
+            <tr>
+                <td rowspan="11"><b>TCB</b></td>
+                <td><b>Order no:</b></td>
+                <td colspan="3">#ABC001</td>
+            </tr>
+            <tr>
+                <td><b>Order Date:</b></td>
+                <td colspan="3">23-Mar-2016</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="center-text"><b>Customer</b></td>
+            </tr>
+            <tr>
+                <td><b>Name:</b></td>
+                <td colspan="3">John Papas</td>
+            </tr>
+            <tr>
+                <td><b>Address:</b></td>
+                <td colspan="3">Independence Dat 5th str, 11511</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="center-text"><b>Order Details</b></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Of Mice and Men</td>
+                <td>Book</td>
+                <td>10.00$</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Les Miserable</td>
+                <td>Book</td>
+                <td>12.00%</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Game of Thromes</td>
+                <td>DVD</td>
+                <td>50.00$</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Samsung Galaxy</td>
+                <td>Mobile Phone</td>
+                <td>200.00$</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="right-text"><b>Total:</b></td>
+                <td>272.00$</td>
+            </tr>
+        </tbody>
+
+    </table>
+</body>
+
+</html>
