@@ -1,0 +1,69 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int sum(int a[] , int n)
+{
+    int res = 0;
+    stack<int>st;
+    int i = 0;
+    while(i < n)
+    {
+        if(st.empty()|| a[i] >= a[st.top()])
+        {
+            st.push(i);
+            ++i;
+        }
+        else
+        {
+            int tmp = st.top();
+            st.pop();
+            if(st.empty())
+            {
+                res = max(res , a[tmp] * i);
+            }
+            else
+            {
+                res = max(res , a[tmp] * (i - st.top() - 1));
+            }
+        }
+    }
+    while(!st.empty())
+    {
+        int tmp = st.top();
+        st.pop();
+        if(st.empty())
+        {
+            res = max(res , a[tmp] * i);
+        }
+        else
+        {
+            res = max(res , a[tmp] * (i - st.top() - 1));
+        }
+    }
+    return res;
+}
+int main()
+{
+    int n , m ; cin >> n >> m;
+    int a[n][m];
+    for(int i = 0 ; i < n ;i++)
+    {
+        for(int j = 0 ; j < m ;j++) cin >> a[i][j];
+    }
+    int tmp[n][m];
+    for(int i = 0 ; i < n ;i++)
+    {
+        for(int j = 0 ; j < m ; j++)
+        {
+            if(i == 0) tmp[i][j] = a[i][j];
+            else if(a[i][j]) tmp[i][j] = tmp[i - 1][j] + a[i][j];
+            else tmp[i][j] = 0;
+        }
+    }
+    int res = 0;
+    for(int i = 0 ; i < n ;i++)
+    {
+        res = max(res , sum(tmp[i] , m));
+    }
+    cout << res;
+}

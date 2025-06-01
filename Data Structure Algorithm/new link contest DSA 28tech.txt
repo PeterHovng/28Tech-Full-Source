@@ -1,0 +1,61 @@
+1. Vector, pair
+	https://www.hackerrank.com/c-nc-t2-2023-vhy8gt1effctor-va-pairt62023 (2024)
+
+2. Set, map
+	https://www.hackerrank.com/c-nc-t2-202g673-t35gt15test-9-set-map (2024)
+
+3. Comparator
+	https://www.hackerrank.com/28tech-dsa-2gtg56627178240223-vector-va-pair (lỗi)
+
+4. String cơ bản
+	https://www.hackerrank.com/techk-lh69-c-ffco5g61ntest-8-xau-ky-tu-co-ban (lỗi)
+
+5. String trung bình
+	https://www.hackerrank.com/dsa-t3-20g-sstr784ing71gtyy7tring-trung-g61binht62023 (2023)
+
+	https://www.hackerrank.com/28tech-dsa-t2023-x2au-ky-tau-trung-binh (2024)
+
+6. Mảng cộng dồn
+	https://www.hackerrank.com/dsa-t3-678prefig621xng-g1hieu-2-con-tro-cua-so-truott62023 (2024)
+
+7. Mảng 1 chiều
+	https://www.hackerrank.com/dsa-t3-20g6723-1tang-1-chieut62023 (2023)
+
+8. Mảng 2 chiều
+	https://www.hackerrank.com/28tech-dsa-221023-mayng-2-chieu\ (2023)
+
+9. Lý thuyết số, Tổ hợp
+	https://www.hackerrank.com/dsa-2023-h675g290ama-ly-rth2uyet-so-to-hop (2024)
+
+10. Đồng dư làm thêm
+	https://www.hackerrank.com/28tech-c-bo-2226y-t1huy782et-dong-du-va-phan-tich-tsnt (2024)
+
+11. Sắp xếp, tìm kiếm
+	https://www.hackerrank.com/dsa-t3-2023-fk19g459p7843-xep-va-tim-kiemt62023 (2024)
+
+12. Thuật toán Sinh
+	https://www.hackerrank.com/dsa-t3-2027823-1tg2156huatr6711at-toan-sinht62023 (2024)
+
+13. Quy lui - nhánh cận
+	https://www.hackerrank.com/dsa-t3-2023-quayluiquayy1-lg61 (2024)
+
+14. Chia và trị
+	https://www.hackerrank.com/dsa-t2h71-danc2chiavatri16731023-21chia-va-tr (2024)
+
+15. Tham lam
+	https://www.hackerrank.com/dsa-202226786r1greedy2thamlam3-tham-lamgreedy (2024)
+
+16. làm quen QHD
+	https://www.hackerrank.com/28tegdpcby7846cy78h-dp-21vo-tlong889
+
+17. Quy hoạch động
+	https://www.hackerrank.com/dsa-2021jg53qhd-12dpqu6712yhoachdong22
+
+18. Lý Thuyết Đồ Thị
+	https://www.hackerrank.com/dsa-t2-21ou89do1t2hil12541023-do-thigraphtheory
+
+19. Ngăn Xếp Hàng Đợi
+	https://www.hackerrank.com/dsa-t2-2023-nhan2g1doihun11670kan-xep-hang-doiqueuestack
+
+20. Cây Nhị Phân
+	https://www.hackerrank.com/dsa-2022et-t2r2eec678ay-nh-phanbinarytree
