@@ -1,6 +1,15 @@
 # 28Tech-Full-Source
 Chào mừng bạn đến với **28Tech-Full-Source**, một nguồn tài liệu học lập trình toàn diện dành cho mọi cấp độ từ người mới bắt đầu đến lập trình viên chuyên nghiệp. Dự án này được thiết kế nhằm cung cấp các tài liệu, bài học và bài tập thực hành để giúp bạn xây dựng kỹ năng lập trình một cách hiệu quả và có hệ thống.
 
+## Lưu ý về nguồn gốc repository
+Repository này ban đầu được mình lấy từ dự án gốc của KhoiBui16 để tham khảo, học tập và sắp xếp lại cho phù hợp với nhu cầu cá nhân. Do thiếu sót nên mình đã không ghi credit ngay từ đầu. Hiện mình đã cập nhật lại đầy đủ thông tin tác giả và dẫn link repo gốc để ghi nhận công sức của bạn ấy.
+
+➡️ Tác giả gốc: [KhoiBui16](https://github.com/KhoiBui16)
+
+➡️ Repository gốc: https://github.com/KhoiBui16/28Tech_Code_Online
+
+Một lần nữa mình cảm ơn bạn Khôi vì đã góp ý lịch sự và thiện chí. Nếu có chỉnh sửa hay chia sẻ lại trong tương lai, mình sẽ luôn thông báo trước cho tác giả.
+
 ## Mục tiêu dự án
 
 - Cung cấp một lộ trình học lập trình rõ ràng và dễ tiếp cận.
@@ -74,7 +83,11 @@ Nếu bạn muốn đóng góp, vui lòng làm theo các bước sau:
 - Website: [28Tech](https://28tech.com.vn)
 - Cộng đồng: [Facebook Group](https://www.facebook.com/groups/28techgroup)
 - Youtube: [28Tech](https://www.youtube.com/@28tech)
+- Tác giả gốc: [KhoiBui16](https://github.com/KhoiBui16)
+- Repository gốc: https://github.com/KhoiBui16/28Tech_Code_Online
 ---
 
 Cảm ơn bạn đã quan tâm đến **28Tech-Full-Source**! Hy vọng rằng dự án này sẽ là một nguồn cảm hứng và hỗ trợ tuyệt vời trong hành trình học lập trình của bạn.
 
+## Lời xin lỗi
+Mình xin gửi lời xin lỗi chân thành đến bạn Khôi vì đã sử dụng lại repository mà không ghi nguồn và không liên hệ trước. Đây là thiếu sót thuộc về mình và mình hoàn toàn tôn trọng công sức bạn đã bỏ ra để xây dựng dự án này. Cảm ơn bạn vì đã góp ý một cách văn minh và thiện chí.
